@@ -127,6 +127,7 @@ src/
 
 **********************************************************************************************************************************
 🧩 UML Diagrams
+
 1️⃣ Class Diagram (Simple)
 ```
 +------------------+
@@ -159,7 +160,7 @@ src/
 
 ```
 **********************************************************************************************************************************
-Clear Sequence Diagram (Step-by-Step Flow)
+✅ Clear Sequence Diagram (Step-by-Step Flow)
 
 Below is a crystal clear ASCII sequence diagram showing how each layer talks:
 ```
@@ -205,7 +206,8 @@ Simple explanation:
 User → Controller → Service → Repository → Service → Controller → User.
 
 **********************************************************************************************************************************
-✅ 2. How to Use POSTMAN in VS Code (Step-by-Step)
+✅ How to Use POSTMAN in VS Code (Step-by-Step)
+
 📌 Step 1 — Install "Postman" Extension
 
 In VS Code:
@@ -449,9 +451,9 @@ or
 
 **********************************************************************************************************************************
 
-## GitHub Commands - Steps to create repo on github and push code from pc to github site ::
+🧱 GitHub Commands - Steps to create repo on github and push code from pc to github site ::
 
-### A. CREATE REPOSITORY ON GITHUB SITE :
+### 🌟 A. CREATE REPOSITORY ON GITHUB SITE :
 
 - First create a repository on github site.
 
@@ -461,7 +463,7 @@ or
 
 ****
 
-### b. You already created a GitHub repo → now follow these steps:
+### 🌟 B. You already created a GitHub repo → now follow these steps:
 
 📌 Step 1: Clone your repository to PC
 
@@ -479,7 +481,7 @@ Make sure the folder now contains src/, pom.xml, README.md
 
 
 ****
-### B-i <in detail>. PUSH CODE FROM PC TO GITHUB SITE
+### ⭐ B-i <in detail>. PUSH CODE FROM PC TO GITHUB SITE
 
 Here are the correct steps when you have already cloned the repository from GitHub.
 
@@ -520,7 +522,7 @@ git push -u origin projver1
 
 Your project is now pushed to branch: projver1, and from GitHub UI you can Create Pull Request → Merge to main.
 
-⭐ Full Corrected Command Set (Copy-Paste Block)
+🚀 Full Corrected Command Set (Copy-Paste Block)
 ```
 cd your-project-folder-name
 git status
@@ -532,14 +534,15 @@ git push -u origin projver1
 
 ******
 
-### B-ii <in detail>. If PUSH from pc to github is done using branch.
+### ⭐ B-ii <in detail>. If PUSH from pc to github is done using branch.
 
 Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 **********************************************************************************************************************************
 
 **********************************************************************************************************************************
-## THEORY *******
+
+🧱 THEORY *******
 
 ***********************
 
@@ -619,7 +622,9 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 
 ****************
-### LAYMAN LANG ... Layman Analogy
+
+### LAYMAN LANG ... Layman Analogy   
+
 🚀 3-Layer Architecture (Explained in Simple Language)
 
 1. Model Layer (WHAT data looks like)
@@ -645,6 +650,7 @@ Like a storage room where you put books in and take books out.
 It only knows how to store and fetch things, nothing else.
 Service layer comes here whenever it needs data.
 
+*****
 
 🎯 Simple Explanation of Layers (Updated)  
 
