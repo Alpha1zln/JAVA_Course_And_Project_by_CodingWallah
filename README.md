@@ -27,7 +27,9 @@ Database integration + JPA + MySQL + DTOs + validations.
 
 
 This **v1** uses an **in-memory HashMap** instead of a database — perfect for learning backend fundamentals.
+
 Built while learning Spring Boot and REST API fundamentals.
+
 ---
 
 **********************************************************************************************************************************
@@ -48,20 +50,27 @@ Built while learning Spring Boot and REST API fundamentals.
 ## 🧱 Project Structure
 
 src/main/java/com/alpha1zln/simpleBookMgmt/
-│
-├── SimpleBookMgmtApplication.java
-│
-├── model/
-│ └── Book.java
-│
-├── repository/
-│ └── BookRepository.java
-│
-├── service/
-│ └── BookService.java
-│
-└── controller/
-└── BookController.java
+
+src/
+└── main/
+    └── java/
+        └── com/
+            └── alpha1zln/
+                └── simpleBookMgmt/
+                    ├── SimpleBookMgmtApplication.java
+                    │
+                    ├── model/
+                    │   └── Book.java
+                    │
+                    ├── repository/
+                    │   └── BookRepository.java
+                    │
+                    ├── service/
+                    │   └── BookService.java
+                    │
+                    └── controller/
+                        └── BookController.java
+
 
 **********************************************************************************************************************************
 
