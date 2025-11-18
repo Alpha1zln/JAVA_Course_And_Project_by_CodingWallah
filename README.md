@@ -50,6 +50,7 @@ Built while learning Spring Boot and REST API fundamentals.
 ## 🧱 Project Structure
 
 ✅ ALL DEFAULT FOLDERS OF A SPRING BOOT + MAVEN PROJECT (SQL Format)
+```
 project-root/
 │
 ├── src/
@@ -70,11 +71,11 @@ project-root/
 ├── pom.xml                      -- Maven build file
 │
 └── README.md
-
+```
 
 #### SRC FOLDER : 
 src/main/java/com/alpha1zln/simpleBookMgmt/  
-
+```
 src/
 └── main/
     └── java/
@@ -95,8 +96,7 @@ src/
                     └── controller/
                         └── BookController.java
 
-
-
+```
 
 **********************************************************************************************************************************
 
