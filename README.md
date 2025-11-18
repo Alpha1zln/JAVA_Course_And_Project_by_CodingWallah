@@ -449,9 +449,9 @@ or
 
 **********************************************************************************************************************************
 
-## GitHub Commands - Steps to create repo on github and push code from pc to github site
+## GitHub Commands - Steps to create repo on github and push code from pc to github site ::
 
-### CREATE REPOSITORY ON GITHUB SITE
+### A. CREATE REPOSITORY ON GITHUB SITE :
 
 - First create a repository on github site.
 
@@ -461,7 +461,7 @@ or
 
 ****
 
-### You already created a GitHub repo → now follow these steps:
+### b. You already created a GitHub repo → now follow these steps:
 
 📌 Step 1: Clone your repository to PC
 
@@ -479,35 +479,60 @@ Make sure the folder now contains src/, pom.xml, README.md
 
 
 ****
-###  PUSH CODE FROM PC TO GITHUB SITE
-### Detail cmds - to push your local Spring Boot project to GitHub.
+### B-i <in detail>. PUSH CODE FROM PC TO GITHUB SITE
 
-## 🚀 Steps to Push Local Project to GitHub (with new branch)
+Here are the correct steps when you have already cloned the repository from GitHub.
 
-### 1. Navigate to your project folder
+📌 IMPORTANT:
+If you cloned a repo → DO NOT run git init (because .git already exists).
+
+🚀 Correct Steps to Push Local Spring Boot Project to GitHub (When Repo is Cloned)
+```
+✅ 1. Go to your project folder
 cd your-project-folder-name
 
-### 2. Initialize Git
-git init
+❌ (Skip this — do NOT run)
+git init     ← NOT NEEDED because repo was cloned
 
-### 3. Add remote GitHub repository
-git remote add origin https://github.com/your-username/your-repo-name.git
+✅ 2. Check Git status
+``` git status ```
 
-### 4. Create and switch to new branch (projver1)
+This confirms:
+repo exists
+remote is linked
+branch name (main)
+
+
+✅ 3. Create and switch to new branch (projver1)
 git checkout -b projver1
 
-### 5. Add all project files
+✅ 4. Add all new files
 git add .
 
-### 6. Commit your code
+✅ 5. Commit your changes
 git commit -m "Initial commit for version 1"
 
-### 7. Push code to new branch
+✅ 6. Push new branch to GitHub
 git push -u origin projver1
+```
+
+🎉 That’s it!
+
+Your project is now pushed to branch: projver1, and from GitHub UI you can Create Pull Request → Merge to main.
+
+⭐ Full Corrected Command Set (Copy-Paste Block)
+```
+cd your-project-folder-name
+git status
+git checkout -b projver1
+git add .
+git commit -m "Initial commit for version 1"
+git push -u origin projver1
+```
 
 ******
 
-### If PUSH from pc to github is done using branch.
+### B-ii <in detail>. If PUSH from pc to github is done using branch.
 
 Then go to GitHub site → Open Pull Request → Merge to main branch.
 
