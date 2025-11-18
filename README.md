@@ -1,5 +1,5 @@
 # JAVA_Course_And_Project_by_CodingWallah   
-## Java course by Shivam Sir [coding wallah utb channel and own https://www.codingwallah.in/]  
+## Java course by Shivam Sir [coding wallah utb channel and own site]  
 
 **********************************************************************************************************************************
 **********************************************************************************************************************************
@@ -622,13 +622,15 @@ Service layer comes here whenever it needs data.
 
 
 🎯 Simple Explanation of Layers (Updated)  
-```
-Layer	                Meaning	                                            What It Does  
-Model	            Data structure / Shape of object	              Book(id, title, author) - Book POJO  
-Repository	      Fake DB	[In-memory storage using HashMap]       Stores books inside HashMap  
-Service	          Logic	/ processing                              Checks, updates, delete rules - add, update, delete  
-Controller	      API	Handles / API entry-point                   URL endpoints, Ex - GET /books  
-```
+
+
+|Layer	         |      Meaning	                            |                    What It Does  |
+|----------------|-----------------------------------------|-------------------------------------|
+|Model	          |  Data structure / Shape of object	         |      Book(id, title, author) - Book POJO  |
+|Repository	      | Fake DB	[In-memory storage using HashMap]    |      Stores books inside HashMap  |
+|Service	      |    Logic	/ processing                     |      Checks, updates, delete rules - add, update, delete  |
+|Controller	      |API	Handles / API entry-point                |      URL endpoints, Ex - GET /books  |
+
 
 *******
  
