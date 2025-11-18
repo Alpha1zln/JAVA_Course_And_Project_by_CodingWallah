@@ -128,7 +128,7 @@ src/
 **********************************************************************************************************************************
 🧩 UML Diagrams
 1️⃣ Class Diagram (Simple)
-
+```
 +------------------+
 |      Book        |
 +------------------+
@@ -157,12 +157,12 @@ src/
                               | + deleteById(id)        |
                               +--------------------------+
 
-
+```
 **********************************************************************************************************************************
 Clear Sequence Diagram (Step-by-Step Flow)
 
 Below is a crystal clear ASCII sequence diagram showing how each layer talks:
-
+```
 User (Postman)
       |
       | 1. Sends HTTP Request (GET/POST/PUT/DELETE)
@@ -199,7 +199,7 @@ User (Postman)
       | 6. Sends HTTP Response (JSON)
       |
 User (Postman)
-
+```
 
 Simple explanation:
 User → Controller → Service → Repository → Service → Controller → User.
@@ -622,11 +622,13 @@ Service layer comes here whenever it needs data.
 
 
 🎯 Simple Explanation of Layers (Updated)  
+```
 Layer	                Meaning	                                            What It Does  
 Model	            Data structure / Shape of object	              Book(id, title, author) - Book POJO  
 Repository	      Fake DB	[In-memory storage using HashMap]       Stores books inside HashMap  
 Service	          Logic	/ processing                              Checks, updates, delete rules - add, update, delete  
 Controller	      API	Handles / API entry-point                   URL endpoints, Ex - GET /books  
+```
 
 *******
  
@@ -650,14 +652,18 @@ Good for documentation
 College submissions / viva questions
 
 **************
+crtr - alpha1zln - cgo
+**************
 ### POSTMAN
 
-• Postman is a tool used to test REST APIs easily.
-• It allows us to send GET, POST, PUT, DELETE requests to our backend.
-• We can check responses instantly without building a full UI.
-• It helps debug errors by showing status codes and response bodies.
-• Developers use it to verify every API endpoint works correctly.
-• It is very important for backend projects because it speeds up testing and development.
+• Postman is a tool used to test REST APIs easily.  
+• It allows us to send GET, POST, PUT, DELETE requests to our backend.  
+• We can check responses instantly without building a full UI.  
+• It helps debug errors by showing status codes and response bodies.  
+• Developers use it to verify every API endpoint works correctly.  
+• It is very important for backend projects because it speeds up testing and development.  
 
 
+**********************************************************************************************************************************
+DONE 
 **********************************************************************************************************************************
