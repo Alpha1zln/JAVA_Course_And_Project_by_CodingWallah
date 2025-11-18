@@ -160,7 +160,8 @@ src/
 
 ```
 **********************************************************************************************************************************
-✅ Clear Sequence Diagram (Step-by-Step Flow)
+
+🧩 Clear Sequence Diagram (Step-by-Step Flow)
 
 Below is a crystal clear ASCII sequence diagram showing how each layer talks:
 ```
@@ -206,7 +207,7 @@ Simple explanation:
 User → Controller → Service → Repository → Service → Controller → User.
 
 **********************************************************************************************************************************
-✅ How to Use POSTMAN in VS Code (Step-by-Step)
+🧩 How to Use POSTMAN in VS Code (Step-by-Step)
 
 📌 Step 1 — Install "Postman" Extension
 
@@ -359,9 +360,9 @@ If ID not found → "Not Found"
 
 ---
 
-## CRUD API Examples
+### CRUD API Examples
 
-### 1️⃣ GET -– GET / Fetch All Books
+#### 1️⃣ GET -– GET / Fetch All Books
 - Method: GET  
 - URL: `http://localhost:8080/books`
 - Purpose: Returns list of all books.
@@ -382,7 +383,7 @@ Response Example:
 
 ---
 
-### 2️⃣ GET - GET BOOK BY ID / Fetch Single Book
+#### 2️⃣ GET - GET BOOK BY ID / Fetch Single Book
 - Method: GET
 - URL: `http://localhost:8080/books/101`
 - Purpose: Returns details of book with ID = 1.
@@ -397,7 +398,7 @@ Response:
 
 ---
 
-### 3️⃣ POST - ADD BOOK (POST) / Add New Book
+#### 3️⃣ POST - ADD BOOK (POST) / Add New Book
 
 - Method: POST
 - URL: `http://localhost:8080/books`
@@ -412,7 +413,7 @@ Body (JSON):
 
 ---
 
-### 4️⃣ PUT – Update Existing Book / UPDATE BOOK (PUT)
+#### 4️⃣ PUT – Update Existing Book / UPDATE BOOK (PUT)
 - Method: PUT
 - URL: `http://localhost:8080/books/102`
 - Purpose: Updates book details with ID = 1.
@@ -425,7 +426,7 @@ Body:
 
 ---
 
-### 5️⃣ DELETE – Remove Book / DELETE BOOK
+#### 5️⃣ DELETE – Remove Book / DELETE BOOK
 - Method: DELETE
 - URL: http://localhost:8080/books/1
 - Purpose: Deletes book with ID = 1.
@@ -437,7 +438,7 @@ or
 
 ---
 
-## Summary Table
+### 🧱 Summary Table
 
 | Operation     | Method | URL                  | Body |
 |--------------|--------|----------------------|------|
@@ -451,9 +452,9 @@ or
 
 **********************************************************************************************************************************
 
-🧱 GitHub Commands - Steps to create repo on github and push code from pc to github site ::
+🌟 GitHub Commands - Steps to create repo on github and push code from pc to github site ::
 
-### 🌟 A. CREATE REPOSITORY ON GITHUB SITE :
+### 🧱 A. CREATE REPOSITORY ON GITHUB SITE :
 
 - First create a repository on github site.
 
@@ -463,7 +464,7 @@ or
 
 ****
 
-### 🌟 B. You already created a GitHub repo → now follow these steps:
+### 🧱 B. You already created a GitHub repo → now follow these steps:
 
 📌 Step 1: Clone your repository to PC
 
@@ -481,7 +482,7 @@ Make sure the folder now contains src/, pom.xml, README.md
 
 
 ****
-### ⭐ B-i <in detail>. PUSH CODE FROM PC TO GITHUB SITE
+### 🧱 B-i <in detail>. PUSH CODE FROM PC TO GITHUB SITE
 
 Here are the correct steps when you have already cloned the repository from GitHub.
 
@@ -534,7 +535,7 @@ git push -u origin projver1
 
 ******
 
-### ⭐ B-ii <in detail>. If PUSH from pc to github is done using branch.
+### 🧱 B-ii <in detail>. If PUSH from pc to github is done using branch.
 
 Then go to GitHub site → Open Pull Request → Merge to main branch.
 
@@ -542,7 +543,7 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 **********************************************************************************************************************************
 
-🧱 THEORY *******
+🌟🌟 ## THEORY 🌟🌟 *******
 
 ***********************
 
@@ -623,7 +624,7 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 ****************
 
-### LAYMAN LANG ... Layman Analogy   
+## 🌟 LAYMAN LANG ... Layman Analogy   
 
 🚀 3-Layer Architecture (Explained in Simple Language)
 
@@ -665,29 +666,27 @@ Service layer comes here whenever it needs data.
 
 *******
  
-### UML = Unified Modeling Language
-
+### 🌟 UML = Unified Modeling Language
+```
 What they are:
 Simple diagrams that show how your application works.
 
 Common ones:
-
 Class Diagram → Shows your classes (Book, Service, Repository)
 
 Sequence Diagram → Shows how requests flow (Controller → Service → Repository)
 
 Why useful:
-
 Helps understand project structure
-
 Good for documentation
-
 College submissions / viva questions
+```
 
 **************
 crtr - alpha1zln - cgo
 **************
-### POSTMAN
+
+### 🌟 POSTMAN
 
 • Postman is a tool used to test REST APIs easily.  
 • It allows us to send GET, POST, PUT, DELETE requests to our backend.  
