@@ -49,7 +49,7 @@ Built while learning Spring Boot and REST API fundamentals.
 
 ## 🧱 Project Structure
 
-✅ ALL DEFAULT FOLDERS OF A SPRING BOOT + MAVEN PROJECT (SQL Format)
+####  ✅ ALL DEFAULT FOLDERS OF A SPRING BOOT + MAVEN PROJECT (SQL Format)
 ```
 project-root/
 │
@@ -103,7 +103,7 @@ src/
 
 ---
 
-## 📌 Endpoints (REST API)
+###  📌 Endpoints (REST API)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -115,7 +115,7 @@ src/
 
 ---
 
-## 📦 JSON Example (Add Book)
+### 📦 JSON Example (Add Book)
 
 ```json
 {
@@ -126,7 +126,7 @@ src/
 ```
 
 **********************************************************************************************************************************
-🧩 UML Diagrams
+## 🧩 UML Diagrams
 
 1️⃣ Class Diagram (Simple)
 ```
@@ -161,7 +161,7 @@ src/
 ```
 **********************************************************************************************************************************
 
-🧩 Clear Sequence Diagram (Step-by-Step Flow)
+## 🧩 Clear Sequence Diagram (Step-by-Step Flow)
 
 Below is a crystal clear ASCII sequence diagram showing how each layer talks:
 ```
@@ -207,7 +207,7 @@ Simple explanation:
 User → Controller → Service → Repository → Service → Controller → User.
 
 **********************************************************************************************************************************
-🧩 How to Use POSTMAN in VS Code (Step-by-Step)
+## 🧩 How to Use POSTMAN in VS Code (Step-by-Step)
 
 📌 Step 1 — Install "Postman" Extension
 
@@ -452,7 +452,7 @@ or
 
 **********************************************************************************************************************************
 
-🌟 GitHub Commands - Steps to create repo on github and push code from pc to github site ::
+## 🌟 GitHub Commands - Steps to create repo on github and push code from pc to github site ::
 
 ### 🧱 A. CREATE REPOSITORY ON GITHUB SITE :
 
@@ -543,11 +543,11 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 **********************************************************************************************************************************
 
-🌟🌟 ## THEORY 🌟🌟 *******
+## 🌟🌟 THEORY 🌟🌟 *******
 
 ***********************
 
-## 🌟 3-Layer Architecture (Simple Explanation)
+### 🌟 3-Layer Architecture (Simple Explanation)
 
 ### 1️⃣ Controller Layer (Presentation Layer)
 - Handles incoming API requests (GET/POST/PUT/DELETE).
@@ -575,7 +575,7 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 
 ***************
-## 🌟 4-Layer Architecture (Simple Explanation)
+### 🌟 4-Layer Architecture (Simple Explanation)
 
 ### 1️⃣ Controller Layer
 - Receives API requests.
@@ -611,7 +611,7 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 *******
 
-## 📝 Architecture Summary Table
+#### 📝 Architecture Summary Table
 
 | Layer Name     | Purpose (Simple Words)                  | Contains What?                      |
 |----------------|-----------------------------------------|-------------------------------------|
@@ -626,8 +626,8 @@ Then go to GitHub site → Open Pull Request → Merge to main branch.
 
 ## 🌟 LAYMAN LANG ... Layman Analogy   
 
-🚀 3-Layer Architecture (Explained in Simple Language)
-
+### 🚀 3-Layer Architecture (Explained in Simple Language)
+```
 1. Model Layer (WHAT data looks like)
 This is your data blueprint.
 Example → Book has id, title, author.
@@ -650,10 +650,11 @@ This is the place where all data is kept safely.
 Like a storage room where you put books in and take books out.
 It only knows how to store and fetch things, nothing else.
 Service layer comes here whenever it needs data.
+```
 
 *****
 
-🎯 Simple Explanation of Layers (Updated)  
+#### 🎯 Simple Explanation of Layers (Updated)  
 
 
 |Layer	         |      Meaning	                            |                    What It Does  |
