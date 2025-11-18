@@ -49,28 +49,27 @@ Built while learning Spring Boot and REST API fundamentals.
 
 ## 🧱 Project Structure
 
-src/main/java/com/alpha1zln/simpleBookMgmt/
+src/main/java/com/alpha1zln/simpleBookMgmt/  
 
-src/
-└── main/
-    └── java/
-        └── com/
-            └── alpha1zln/
-                └── simpleBookMgmt/
-                    ├── SimpleBookMgmtApplication.java
-                    │
-                    ├── model/
-                    │   └── Book.java
-                    │
-                    ├── repository/
-                    │   └── BookRepository.java
-                    │
-                    ├── service/
-                    │   └── BookService.java
-                    │
-                    └── controller/
-                        └── BookController.java
-
+src/  
+└── main/  
+    └── java/  
+        └── com/  
+            └── alpha1zln/  
+                └── simpleBookMgmt/  
+                    ├── SimpleBookMgmtApplication.java  
+                    │  
+                    ├── model/  
+                    │   └── Book.java  
+                    │  
+                    ├── repository/  
+                    │   └── BookRepository.java  
+                    │  
+                    ├── service/  
+                    │   └── BookService.java  
+                    │  
+                    └── controller/  
+                        └── BookController.java  
 
 **********************************************************************************************************************************
 
