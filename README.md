@@ -49,27 +49,54 @@ Built while learning Spring Boot and REST API fundamentals.
 
 ## 🧱 Project Structure
 
+✅ ALL DEFAULT FOLDERS OF A SPRING BOOT + MAVEN PROJECT (SQL Format)
+project-root/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/                -- main source code
+│   │   ├── resources/           -- configs & static files
+│   │   │   ├── application.properties
+│   │   │   ├── application.yml
+│   │   │   └── static/          -- CSS, JS, images
+│   │   │
+│   │   └── webapp/ (optional)   -- JSP or templates
+│   │
+│   └── test/
+│       └── java/                -- unit tests
+│
+├── target/                      -- generated output (ignored in git)
+│
+├── pom.xml                      -- Maven build file
+│
+└── README.md
+
+
+#### SRC FOLDER : 
 src/main/java/com/alpha1zln/simpleBookMgmt/  
 
-src/  
-└── main/  
-    └── java/  
-        └── com/  
-            └── alpha1zln/  
-                └── simpleBookMgmt/  
-                    ├── SimpleBookMgmtApplication.java  
-                    │  
-                    ├── model/  
-                    │   └── Book.java  
-                    │  
-                    ├── repository/  
-                    │   └── BookRepository.java  
-                    │  
-                    ├── service/  
-                    │   └── BookService.java  
-                    │  
-                    └── controller/  
-                        └── BookController.java  
+src/
+└── main/
+    └── java/
+        └── com/
+            └── alpha1zln/
+                └── simpleBookMgmt/
+                    ├── SimpleBookMgmtApplication.java
+                    │
+                    ├── model/
+                    │   └── Book.java
+                    │
+                    ├── repository/
+                    │   └── BookRepository.java
+                    │
+                    ├── service/
+                    │   └── BookService.java
+                    │
+                    └── controller/
+                        └── BookController.java
+
+
+
 
 **********************************************************************************************************************************
 
@@ -96,6 +123,7 @@ src/
   "title": "The Alchemist",
   "author": "Paulo Coelho"
 }
+```
 
 **********************************************************************************************************************************
 🧩 UML Diagrams
