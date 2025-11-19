@@ -1,0 +1,14 @@
+### Create Table
+GET http://localhost:8080/db/createTable
+
+### Insert
+POST http://localhost:8080/db/insert
+Content-Type: application/json
+
+{
+  "name": "alan",
+  "age": 23
+}
+
+### Get All
+GET http://localhost:8080/db/getAll
