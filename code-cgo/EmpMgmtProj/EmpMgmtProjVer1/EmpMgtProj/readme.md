@@ -688,15 +688,15 @@ crtr - alpha1zln - cgo
 
 
 ## 🔍 H2 Database Screenshot
-<img src="op_proj/h2_embedded_db.png" width="50%">
+<img src="op_proj/h2_embedded_db.png" width="75%">
 <!-- ![H2 Console](./op/h2.png) -->
 
 ## 🧪 Postman Testing Screenshot
-<img src="op_proj/ems_ver1_postman_op_img.png" width="50%">
+<img src="op_proj/ems_ver1_postman_op_img.png" width="75%">
 <!-- ![Postman](./op/postman.png) -->
 
 ## 🗂️ VS Code Project Structure
-<img src="op_proj/vscode_structureOfproj.png" width="50%">
+<img src="op_proj/vscode_structureOfproj.png" width="75%">
 <!-- ![Structure](./op/structure.png) -->
 
 
