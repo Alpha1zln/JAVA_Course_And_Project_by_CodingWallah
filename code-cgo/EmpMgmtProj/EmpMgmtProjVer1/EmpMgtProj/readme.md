@@ -688,15 +688,15 @@ crtr - alpha1zln - cgo
 
 
 ## 🔍 H2 Database Screenshot
-<img src="docs/images/h2_embedded_db.png" width="50%">
+<img src="op_proj/h2_embedded_db.png" width="50%">
 <!-- ![H2 Console](./op/h2.png) -->
 
 ## 🧪 Postman Testing Screenshot
-<img src="docs/images/ems_ver1_postman_op_img.png" width="50%">
+<img src="op_proj/ems_ver1_postman_op_img.png" width="50%">
 <!-- ![Postman](./op/postman.png) -->
 
 ## 🗂️ VS Code Project Structure
-<img src="docs/images/vscode_structureOfproj.png" width="50%">
+<img src="op_proj/vscode_structureOfproj.png" width="50%">
 <!-- ![Structure](./op/structure.png) -->
 
 
@@ -757,41 +757,44 @@ crtr - alpha1zln - cgo
 
 1️⃣  WHY DO WE USE 3-LAYER ARCHITECTURE?
 ---------------------------------------------------------------
+```
 • Clean separation of concerns
 • Reusable business logic
 • Easier debugging (each layer isolated)
 • Loose coupling between components
 • Highly scalable architecture
 • Easy to unit-test
-
+```
 ---------------------------------------------------------------
 
 2️⃣  IS THE SERVICE LAYER MANDATORY?
 ---------------------------------------------------------------
-No — but strongly recommended.
-❗ Avoid placing business logic inside Controllers.
+No — but strongly recommended.  
+❗ Avoid placing business logic inside Controllers.  
 
 ---------------------------------------------------------------
 
 3️⃣  WHY IS H2 DB PERFECT FOR LEARNING?
 ---------------------------------------------------------------
+```
 • In-memory database
 • Resets automatically on restart
 • Built-in web console
 • No installation required
 • Extremely fast — ideal for prototyping
-
+```
 ---------------------------------------------------------------
 
 4️⃣  WHY DOES SQL INSERT FAIL IN H2?
 ---------------------------------------------------------------
+```
 Common Issues:
 ❌ Wrong quotes → use ' ' not " "
 ❌ Wrong column names
 ❌ Using reserved keywords (user, order…)
 ❌ Wrong datatypes
 ❌ Table not created yet
-
+```
 Correct Example:
 INSERT INTO employee (id, name, department, salary)
 VALUES (5, 'jen', 'RD', 400);
@@ -800,21 +803,24 @@ VALUES (5, 'jen', 'RD', 400);
 
 5️⃣  WHY USE DTOs?
 ---------------------------------------------------------------
+```
 • Hide internal entity fields
 • Prevent exposing DB schema
 • Custom request/response structure
 • Loose coupling
 • Better security
-
+```
 ---------------------------------------------------------------
 
 6️⃣  WHY MICROservices OVER MONOLITH?
 ---------------------------------------------------------------
+```
 • Independent deployments
 • Independent scaling
 • Fault isolation
 • Use different technologies per service
 • Smaller, maintainable codebases
+```
 ---------------------------------------------------------------
 
 ---
