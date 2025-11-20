@@ -415,41 +415,28 @@ public class EmployeeDTO {
 Controller → accepts DTO
 Service → converts DTO to Entity
 
+---
+
 ✅ 3. Everything NEW added in Version-2 (compared to Version-1)
 
 Below is your upgrade chart, very clear:
 
-+---------------------------------------------------------------------------------------------+
-|                           VERSION 1 vs VERSION 2 — SYSTEM UPGRADE                           |
-+----------------------------+------------------------------------------------+---------------+
-|           TOPIC            |                  VERSION 1                     |   VERSION 2   |
-|                            |           (JDBC + H2 Database)                 | (JPA + Hibernate +   |
-|                            |                                                | Exception Handling + |
-|                            |                                                |       DTO)          |
-+----------------------------+------------------------------------------------+-----------------------+
-| Database Access            | Spring JDBC Template                           | JPA Repository       |
-+----------------------------+------------------------------------------------+-----------------------+
-| ORM                        | ❌ None                                        | ✅ JPA + Hibernate   |
-+----------------------------+------------------------------------------------+-----------------------+
-| Entities                   | Plain POJO                                     | @Entity, @Id, @Table |
-+----------------------------+------------------------------------------------+-----------------------+
-| DB Table Creation          | Manual (schema.sql required)                   | Auto (JPA ddl-auto)  |
-+----------------------------+------------------------------------------------+-----------------------+
-| SQL Handling               | Manual SQL queries                             | Auto-generated SQL   |
-+----------------------------+------------------------------------------------+-----------------------+
-| Repository Layer           | Custom DAO + SQL                               | JpaRepository        |
-+----------------------------+------------------------------------------------+-----------------------+
-| Exception Handling         | ❌ Basic try/catch in controller               | Global Handler using |
-|                            |                                                | @RestControllerAdvice|
-+----------------------------+------------------------------------------------+-----------------------+
-| DTO Usage                  | ❌ No DTO                                      | DTO for request/resp |
-+----------------------------+------------------------------------------------+-----------------------+
-| Object Mapping             | Manual mapping                                 | Constructor / ModelMapper |
-+----------------------------+------------------------------------------------+-----------------------+
-| Architecture Layers        | Controller → Service → DAO                     | Same (but cleaner,   |
-|                            |                                                | standardized layering)|
-+----------------------------+------------------------------------------------+-----------------------+
+# VERSION 1 vs VERSION 2 — SYSTEM UPGRADE
 
+| **TOPIC**              | **VERSION 1 (JDBC + H2)**                 | **VERSION 2 (JPA + Hibernate + Exception Handling + DTO)** |
+|------------------------|--------------------------------------------|-------------------------------------------------------------|
+| Database Access        | Spring JDBC Template                       | JPA Repository                                              |
+| ORM                    | ❌ None                                     | ✅ JPA + Hibernate                                          |
+| Entities               | Plain POJO                                 | `@Entity`, `@Id`, `@Table`                                 |
+| DB Table Creation      | Manual (`schema.sql`)                      | Auto (`ddl-auto=update`)                                    |
+| SQL Handling           | Manual SQL queries                         | Auto-generated SQL                                           |
+| Repository Layer       | Custom DAO + SQL                           | `JpaRepository` (150+ methods)                              |
+| Exception Handling     | Basic `try/catch` in controller            | Global Handler using `@RestControllerAdvice`                |
+| DTO Usage              | ❌ No DTO                                   | DTO for request + response                                  |
+| Object Mapping         | Manual mapping                             | Constructor / ModelMapper                                   |
+| Architecture Layers    | Controller → Service → DAO                 | Same, but cleaner + standardized                             |
+
+---
 
 ✅ 4. Explaining the NEW Concepts in Layman Language
 🔷 (A) What is JPA?
@@ -697,6 +684,23 @@ git push -u origin main
 ```
 
 ---
+## Screenshots 
+
+
+## 🔍 H2 Database Screenshot
+<img src="op_proj/h2db.png" width="75%">
+<!-- ![H2 Console](./op/h2.png) -->
+
+## 🧪 Postman Testing Screenshot
+<img src="op_proj/postman_put_req.png" width="75%">
+<!-- ![Postman](./op/postman.png) -->
+
+## 🗂️ VS Code Project Structure
+<img src="op_proj/proj_str_appn_prop.png" width="75%">
+<!-- ![Structure](./op/structure.png) -->
+
+
+---
 
 # 📚 Glossary
 
@@ -746,7 +750,7 @@ Controller → Service → Repository → Database
 
 ---
 
-# 📚 11. Detailed Theory (Important Concepts)
+# 📚  Detailed Theory (Important Concepts)
 
 ## ⭐ JPA (Java Persistence API)
     Interface used to interact with databases
@@ -825,26 +829,18 @@ Because data.sql ran before Hibernate created the table.
 Solution: remove db.sql or rename to schema.sql.
 
 ✔ Difference between Version 1 and Version 2
-+-----------------------------------------------------------------------------------+
-|                            VERSION 1 vs VERSION 2 — FEATURES                      |
-+------------------------+---------------------------+------------------------------+
-|        FEATURE         |     V1 (SPRING JDBC)      |      V2 (SPRING JPA)         |
-+------------------------+---------------------------+------------------------------+
-| Manual SQL             | Yes                       | No                           |
-+------------------------+---------------------------+------------------------------+
-| Entity Class           | No                        | Yes (@Entity)                |
-+------------------------+---------------------------+------------------------------+
-| Repository             | Manual Queries / DAO      | Auto (JpaRepository)         |
-+------------------------+---------------------------+------------------------------+
-| DTO                    | No                        | Yes                          |
-+------------------------+---------------------------+------------------------------+
-| Exception Handling     | Basic (inside controller) | Custom (Global Handler)       |
-+------------------------+---------------------------+------------------------------+
-| ORM                    | No                        | Yes (JPA + Hibernate)        |
-+------------------------+---------------------------+------------------------------+
-| Boilerplate Code       | High (JDBC templates)     | Very Low (JPA auto-SQL)      |
-+------------------------+---------------------------+------------------------------+
 
+# VERSION 1 vs VERSION 2 — FEATURES
+
+| **FEATURE**          | **V1 (Spring JDBC)**             | **V2 (Spring JPA)**                |
+|----------------------|----------------------------------|------------------------------------|
+| Manual SQL           | Yes                              | No                                 |
+| Entity Class         | No                               | Yes (`@Entity`)                    |
+| Repository           | Manual Queries / DAO             | Auto (`JpaRepository`)             |
+| DTO                  | No                               | Yes                                |
+| Exception Handling   | Basic (inside controller)        | Custom (Global Handler)            |
+| ORM                  | No                               | Yes (JPA + Hibernate)              |
+| Boilerplate Code     | High (JDBC templates)            | Very Low (JPA auto SQL)            |
 
 ---
 ## 📚  Theory of New Concepts in Ver 2
@@ -1174,15 +1170,14 @@ public class Employee {
 
 
 And you save like:
-
 repo.save(employee);
-
 
 ✔ No SQL
 ✔ No ResultSet
 ✔ No boilerplate
 
 💡 JPA = "I will convert your Java class to a database table automatically."
+
 🅱️ B. What is Hibernate?
 🔹 JPA = Rules / Standard
 🔹 Hibernate = Implementation / Engine
@@ -1193,9 +1188,7 @@ JPA: "Write @Entity, I'll manage the table."
 Hibernate: "I will generate SQL based on those annotations."
 
 🔹 Example From Your Project
-
 When you run:
-
 repo.save(emp);
 
 
@@ -1217,16 +1210,15 @@ spring.jpa.show-sql=true
 ✔ Converting rows → objects
 
 🅲️ C. What is ORM? (Object Relational Mapping)
-🔹 Simple definition:
 
+🔹 Simple definition:
 ORM = Convert Java Objects ↔ Database Rows
 
 Java Object	DB Row
 Employee object	employee table row
+
 🔹 Example
-
 Java Object:
-
 Employee emp = new Employee("sam", "IT", 100.0);
 
 
@@ -1252,18 +1244,19 @@ Hibernate inserts this row automatically.
 🔹 It tells Hibernate how to handle table creation.
 
 From your application.properties:
-
 spring.jpa.hibernate.ddl-auto=update
 
 🔹 What update does:
+```
 Action	Allowed?
 Create new tables	✔ Yes
 Add new columns	✔ Yes
 Modify schema	✔ Yes
 Keep existing data	✔ Safe
 Drop tables	❌ No
-Example in your project:
+```
 
+Example in your project:
 Yesterday Employee had 3 fields:
 name, salary, department
 
@@ -1326,6 +1319,7 @@ repo.deleteById(3);
 
 
 No SQL required.
+
 ---
 ***************
 done
