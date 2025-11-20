@@ -418,7 +418,7 @@ Service → converts DTO to Entity
 ✅ 3. Everything NEW added in Version-2 (compared to Version-1)
 
 Below is your upgrade chart, very clear:
-```
+
 +---------------------------------------------------------------------------------------------+
 |                           VERSION 1 vs VERSION 2 — SYSTEM UPGRADE                           |
 +----------------------------+------------------------------------------------+---------------+
@@ -449,7 +449,7 @@ Below is your upgrade chart, very clear:
 | Architecture Layers        | Controller → Service → DAO                     | Same (but cleaner,   |
 |                            |                                                | standardized layering)|
 +----------------------------+------------------------------------------------+-----------------------+
-```
+
 
 ✅ 4. Explaining the NEW Concepts in Layman Language
 🔷 (A) What is JPA?
@@ -697,23 +697,6 @@ git push -u origin main
 ```
 
 ---
-## Screenshots 
-
-
-## 🔍 H2 Database Screenshot
-<img src="op_proj/h2db.png" width="75%">
-<!-- ![H2 Console](./op/h2.png) -->
-
-## 🧪 Postman Testing Screenshot
-<img src="op_proj/postman_put_req.png" width="75%">
-<!-- ![Postman](./op/postman.png) -->
-
-## 🗂️ VS Code Project Structure
-<img src="op_proj/proj_str_appn_prop.png" width="75%">
-<!-- ![Structure](./op/structure.png) -->
-
-
----
 
 # 📚 Glossary
 
@@ -842,7 +825,6 @@ Because data.sql ran before Hibernate created the table.
 Solution: remove db.sql or rename to schema.sql.
 
 ✔ Difference between Version 1 and Version 2
-```
 +-----------------------------------------------------------------------------------+
 |                            VERSION 1 vs VERSION 2 — FEATURES                      |
 +------------------------+---------------------------+------------------------------+
@@ -862,7 +844,7 @@ Solution: remove db.sql or rename to schema.sql.
 +------------------------+---------------------------+------------------------------+
 | Boilerplate Code       | High (JDBC templates)     | Very Low (JPA auto-SQL)      |
 +------------------------+---------------------------+------------------------------+
-```
+
 
 ---
 ## 📚  Theory of New Concepts in Ver 2
@@ -1192,14 +1174,15 @@ public class Employee {
 
 
 And you save like:
+
 repo.save(employee);
+
 
 ✔ No SQL
 ✔ No ResultSet
 ✔ No boilerplate
 
 💡 JPA = "I will convert your Java class to a database table automatically."
-
 🅱️ B. What is Hibernate?
 🔹 JPA = Rules / Standard
 🔹 Hibernate = Implementation / Engine
@@ -1210,7 +1193,9 @@ JPA: "Write @Entity, I'll manage the table."
 Hibernate: "I will generate SQL based on those annotations."
 
 🔹 Example From Your Project
+
 When you run:
+
 repo.save(emp);
 
 
@@ -1232,15 +1217,16 @@ spring.jpa.show-sql=true
 ✔ Converting rows → objects
 
 🅲️ C. What is ORM? (Object Relational Mapping)
-
 🔹 Simple definition:
+
 ORM = Convert Java Objects ↔ Database Rows
 
 Java Object	DB Row
 Employee object	employee table row
-
 🔹 Example
+
 Java Object:
+
 Employee emp = new Employee("sam", "IT", 100.0);
 
 
@@ -1266,19 +1252,18 @@ Hibernate inserts this row automatically.
 🔹 It tells Hibernate how to handle table creation.
 
 From your application.properties:
+
 spring.jpa.hibernate.ddl-auto=update
 
 🔹 What update does:
-```
 Action	Allowed?
 Create new tables	✔ Yes
 Add new columns	✔ Yes
 Modify schema	✔ Yes
 Keep existing data	✔ Safe
 Drop tables	❌ No
-```
-
 Example in your project:
+
 Yesterday Employee had 3 fields:
 name, salary, department
 
@@ -1341,7 +1326,6 @@ repo.deleteById(3);
 
 
 No SQL required.
-
 ---
 ***************
 done
