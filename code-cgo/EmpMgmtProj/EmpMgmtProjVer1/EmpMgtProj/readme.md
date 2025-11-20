@@ -687,7 +687,6 @@ crtr - alpha1zln - cgo
 * vscode-project-structure.png
 
 
-```md
 ## 🔍 H2 Database Screenshot
 <img src="docs/images/h2_embedded_db.png" width="50%">
 <!-- ![H2 Console](./op/h2.png) -->
@@ -699,7 +698,7 @@ crtr - alpha1zln - cgo
 ## 🗂️ VS Code Project Structure
 <img src="docs/images/vscode_structureOfproj.png" width="50%">
 <!-- ![Structure](./op/structure.png) -->
-```
+
 
 ---
 
@@ -708,81 +707,115 @@ crtr - alpha1zln - cgo
 # ✅ 📘 GLOSSARY — MUST-KNOW SPRING BOOT TERMS
 
 ```
-Term	Meaning
-Spring Boot	Framework that simplifies building Java apps using auto-configuration, embedded servers, and opinionated defaults.
-REST API	Set of HTTP endpoints (GET/POST/PUT/DELETE) used to communicate between client and server.
-Controller	Layer that exposes APIs and handles HTTP requests.
-Service Layer	Contains business logic — rules, validation, transformations.
-Repository Layer	Talks to DB using JPA/Hibernate and runs CRUD operations.
-Entity	Java class mapped to a database table.
-DTO	Object used for API input/output — avoids exposing your entity.
-JPA (Java Persistence API)	Spec for ORM (Object–Relational Mapping).
-Hibernate	Implementation of JPA used to talk to SQL DBs.
-H2 DB	Lightweight in-memory database for development/testing.
-IOC (Inversion of Control)	Spring manages object creation instead of you.
-DI (Dependency Injection)	Injecting dependencies instead of creating them with new.
-Bean	Object managed by Spring's IOC container.
-Autowiring	Spring injecting dependencies automatically.
-Microservice	Small, independent service with its own DB & API.
-Eureka	Spring Cloud registry where microservices find each other.
-API Gateway	Single entry point that routes external requests to microservices.
-JWT (JSON Web Token)	Token used for stateless authentication.
+
++-------------------------+-----------------------------------------------------------------------+
+|         Term            |                               Meaning                                 |
++-------------------------+-----------------------------------------------------------------------+
+| Spring Boot             | Framework simplifying Java app dev using auto-config & embedded server |
++-------------------------+-----------------------------------------------------------------------+
+| REST API                | HTTP endpoints for communication (GET/POST/PUT/DELETE)                 |
++-------------------------+-----------------------------------------------------------------------+
+| Controller              | Handles incoming requests & exposes REST APIs                          |
++-------------------------+-----------------------------------------------------------------------+
+| Service Layer           | Contains business logic (rules, validation, transformations)           |
++-------------------------+-----------------------------------------------------------------------+
+| Repository Layer        | Talks to DB using JPA/Hibernate for CRUD                               |
++-------------------------+-----------------------------------------------------------------------+
+| Entity                  | Java class mapped to database table                                    |
++-------------------------+-----------------------------------------------------------------------+
+| DTO                     | Object for API input/output — hides Entity                             |
++-------------------------+-----------------------------------------------------------------------+
+| JPA                     | ORM specification                                                      |
++-------------------------+-----------------------------------------------------------------------+
+| Hibernate               | Popular JPA implementation                                             |
++-------------------------+-----------------------------------------------------------------------+
+| H2 Database             | Lightweight in-memory dev/test DB                                      |
++-------------------------+-----------------------------------------------------------------------+
+| IOC                     | Spring manages object creation                                         |
++-------------------------+-----------------------------------------------------------------------+
+| DI                      | Inject dependencies automatically                                       |
++-------------------------+-----------------------------------------------------------------------+
+| Bean                    | Object controlled by Spring Container                                  |
++-------------------------+-----------------------------------------------------------------------+
+| Autowiring             | Spring auto injects required beans                                     |
++-------------------------+-----------------------------------------------------------------------+
+| Microservice            | Small independent service with its own API & DB                        |
++-------------------------+-----------------------------------------------------------------------+
+| Eureka                  | Registry for service discovery                                         |
++-------------------------+-----------------------------------------------------------------------+
+| API Gateway             | Single entry point that routes requests                                |
++-------------------------+-----------------------------------------------------------------------+
+| JWT                     | Token for stateless authentication                                     |
++-------------------------+-----------------------------------------------------------------------+
+
 ```
 
 ### ✅ ❓ FAQ — Frequently Asked Questions
-1. Why create 3 layers (Controller → Service → Repository)?
+---------------------------------------------------------------
+📘 FAQ — IMPORTANT QUESTIONS & ANSWERS
+---------------------------------------------------------------
 
-Because:
-✔ Clean separation
-✔ Easier debugging
-✔ Re-usability
-✔ Loose coupling
-✔ Testability improves
-✔ Scales better
+1️⃣  WHY DO WE USE 3-LAYER ARCHITECTURE?
+---------------------------------------------------------------
+• Clean separation of concerns
+• Reusable business logic
+• Easier debugging (each layer isolated)
+• Loose coupling between components
+• Highly scalable architecture
+• Easy to unit-test
 
-2. Is the Service layer mandatory?
+---------------------------------------------------------------
 
-Technically no, but it's best practice.
-Avoid putting logic inside Controller.
+2️⃣  IS THE SERVICE LAYER MANDATORY?
+---------------------------------------------------------------
+No — but strongly recommended.
+❗ Avoid placing business logic inside Controllers.
 
-3. Why is H2 DB good for learning?
+---------------------------------------------------------------
 
-Because it’s:
-✔ In-memory
-✔ Instant reset
-✔ Has web UI
-✔ No install required
+3️⃣  WHY IS H2 DB PERFECT FOR LEARNING?
+---------------------------------------------------------------
+• In-memory database
+• Resets automatically on restart
+• Built-in web console
+• No installation required
+• Extremely fast — ideal for prototyping
 
-4. Why does my SQL insert fail with H2?
+---------------------------------------------------------------
 
-Common reasons:
+4️⃣  WHY DOES SQL INSERT FAIL IN H2?
+---------------------------------------------------------------
+Common Issues:
+❌ Wrong quotes → use ' ' not " "
+❌ Wrong column names
+❌ Using reserved keywords (user, order…)
+❌ Wrong datatypes
+❌ Table not created yet
 
-Wrong quotes " " instead of ' '
-
-Table name reserved keyword
-
-Column name mismatch
-
-Wrong datatype
-
-DB not initialized yet
-
-Correct SQL example:
-
-INSERT INTO employee(id, name, department, salary)
+Correct Example:
+INSERT INTO employee (id, name, department, salary)
 VALUES (5, 'jen', 'RD', 400);
 
-5. Why use DTOs?
+---------------------------------------------------------------
 
-To prevent exposing sensitive columns (password, salary), avoid entity bloating, and control API format.
+5️⃣  WHY USE DTOs?
+---------------------------------------------------------------
+• Hide internal entity fields
+• Prevent exposing DB schema
+• Custom request/response structure
+• Loose coupling
+• Better security
 
-6. Why microservices instead of monolith?
+---------------------------------------------------------------
 
-Because microservices allow:
-✔ Independent deployment
-✔ Independent scaling
-✔ Fault isolation
-✔ Technology flexibility
+6️⃣  WHY MICROservices OVER MONOLITH?
+---------------------------------------------------------------
+• Independent deployments
+• Independent scaling
+• Fault isolation
+• Use different technologies per service
+• Smaller, maintainable codebases
+---------------------------------------------------------------
 
 ---
 
